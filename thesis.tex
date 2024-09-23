@@ -1,0 +1,98 @@
+\newcommand{\mytitle}{Elementary Functions in Hardware: Algorithm Exploration}
+\newcommand{\myauthor}{Daniel Thomas}
+
+\documentclass[
+	ngerman,
+	ruledheaders=section,
+	class=report,
+	thesis={type=bachelor},
+	accentcolor=9c,
+	marginpar=false,
+	BCOR=10mm,
+	parskip=half-,
+	fontsize=11pt,
+	colorback=false,
+	bibliography=totoc,
+	listof=totoc
+	]{tudapub}
+	
+\geometry{a4paper}
+\usepackage{iftex}
+\ifPDFTeX
+\usepackage[utf8]{inputenc}
+\fi
+\usepackage[english, main=english]{babel}
+\usepackage[autostyle]{csquotes}
+\usepackage{microtype}
+\usepackage{biblatex}
+\bibliography{bibliography}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{xltabular}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{ltablex}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage[center,labelfont=bf]{caption}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{paralist}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{acronym}
+
+\usepackage{hyperref}
+\usepackage[toc]{appendix}
+\usepackage{amsthm}
+
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage{enumitem}
+
+\usepackage{blindtext}
+
+\graphicspath{{img/}}
+
+\let\file\texttt
+\let\code\texttt
+
+\begin{document}
+	\Metadata{
+	title=\mytitle,
+	author=\myauthor
+}
+\title{\mytitle}
+\subtitle{}
+\author[Signature]{\myauthor} 
+\reviewer{Prof. Dr. Zsolt István \and Gutachter 2}% TODO Gutachter2
+
+\department{inf}
+\institute{Data Management Lab}
+\addTitleBoxLogo{dm_logo}
+\submissiondate{\today}
+\examdate{\today}
+
+\maketitle
+\affidavit
+
+\input{chapters/Abstract.tex}
+\tableofcontents
+\listoffigures
+
+\input{chapters/Acronyms.tex}
+\input{chapters/Introduction}
+\input{chapters/Background}
+\input{chapters/Design}
+\input{chapters/Implementation}
+\input{chapters/Evaluation}
+\input{chapters/Conclusion}
+		
+\printbibliography
+
+\input{chapters/Appendix}
+	
+\end{document}

@@ -1,0 +1,15 @@
+
+\begin{appendices}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\makeatletter
+\addtocontents{toc}{%
+  \begingroup
+  \let\protect\l@chapter\protect\l@section
+  \let\protect\l@section\protect\l@subsection
+}
+
+\chapter{Experiment Parameters}
+\label{appendix:experiment_parameters}
+
+\end{appendices}
